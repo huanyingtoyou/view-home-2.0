@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/view-api/view-api.iml" filepath="$PROJECT_DIR$/view-api/view-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/view-common/view-common.iml" filepath="$PROJECT_DIR$/view-common/view-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/view-config-server/view-config-server.iml" filepath="$PROJECT_DIR$/view-config-server/view-config-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/view-elasticsearch/view-elasticsearch.iml" filepath="$PROJECT_DIR$/view-elasticsearch/view-elasticsearch.iml" />
+      <module fileurl="file://$PROJECT_DIR$/view-eureka/view-eureka.iml" filepath="$PROJECT_DIR$/view-eureka/view-eureka.iml" />
+      <module fileurl="file://$PROJECT_DIR$/view-eureka-cluster/view-eureka-cluster.iml" filepath="$PROJECT_DIR$/view-eureka-cluster/view-eureka-cluster.iml" />
+      <module fileurl="file://$PROJECT_DIR$/view-home-2.0.iml" filepath="$PROJECT_DIR$/view-home-2.0.iml" />
+      <module fileurl="file://$PROJECT_DIR$/view-hystrix-dashboard/view-hystrix-dashboard.iml" filepath="$PROJECT_DIR$/view-hystrix-dashboard/view-hystrix-dashboard.iml" />
+      <module fileurl="file://$PROJECT_DIR$/view-hystrix-turbine/view-hystrix-turbine.iml" filepath="$PROJECT_DIR$/view-hystrix-turbine/view-hystrix-turbine.iml" />
+      <module fileurl="file://$PROJECT_DIR$/view-mycat/view-mycat.iml" filepath="$PROJECT_DIR$/view-mycat/view-mycat.iml" />
+      <module fileurl="file://$PROJECT_DIR$/view-photo-service/view-photo-service.iml" filepath="$PROJECT_DIR$/view-photo-service/view-photo-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/view-rabbitmq/view-rabbitmq.iml" filepath="$PROJECT_DIR$/view-rabbitmq/view-rabbitmq.iml" />
+      <module fileurl="file://$PROJECT_DIR$/view-service-cloud-sharding-jdbc/view-service-cloud-sharding-jdbc.iml" filepath="$PROJECT_DIR$/view-service-cloud-sharding-jdbc/view-service-cloud-sharding-jdbc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/view-service-java-sharding-jdbc/view-service-java-sharding-jdbc.iml" filepath="$PROJECT_DIR$/view-service-java-sharding-jdbc/view-service-java-sharding-jdbc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/view-service-java-slave-sharding-jdbc/view-service-java-slave-sharding-jdbc.iml" filepath="$PROJECT_DIR$/view-service-java-slave-sharding-jdbc/view-service-java-slave-sharding-jdbc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/view-service-java-yml-sharding-jdbc/view-service-java-yml-sharding-jdbc.iml" filepath="$PROJECT_DIR$/view-service-java-yml-sharding-jdbc/view-service-java-yml-sharding-jdbc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/view-sleuth-elk/view-sleuth-elk.iml" filepath="$PROJECT_DIR$/view-sleuth-elk/view-sleuth-elk.iml" />
+      <module fileurl="file://$PROJECT_DIR$/view-sleuth-zipkin-server/view-sleuth-zipkin-server.iml" filepath="$PROJECT_DIR$/view-sleuth-zipkin-server/view-sleuth-zipkin-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/view-user-service/view-user-service.iml" filepath="$PROJECT_DIR$/view-user-service/view-user-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/view-user-service-second/view-user-service-second.iml" filepath="$PROJECT_DIR$/view-user-service-second/view-user-service-second.iml" />
+      <module fileurl="file://$PROJECT_DIR$/view-video-service/view-video-service.iml" filepath="$PROJECT_DIR$/view-video-service/view-video-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/view-view/view-view.iml" filepath="$PROJECT_DIR$/view-view/view-view.iml" />
+      <module fileurl="file://$PROJECT_DIR$/view-zuul/view-zuul.iml" filepath="$PROJECT_DIR$/view-zuul/view-zuul.iml" />
+    </modules>
+  </component>
+</project>

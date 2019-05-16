@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.lihy.view</groupId>
+    <artifactId>view-home-2.0</artifactId>
+    <packaging>pom</packaging>
+    <version>0.0.1-SNAPSHOT</version>
+    <modules>
+        <module>view-view</module>
+        <module>view-common</module>
+        <module>view-eureka</module>
+        <module>view-eureka-cluster</module>
+        <module>view-user-service</module>
+        <module>view-user-service-second</module>
+        <module>view-service-cloud-sharding-jdbc</module>
+        <module>view-service-java-sharding-jdbc</module>
+        <module>view-service-java-yml-sharding-jdbc</module>
+        <module>view-service-java-slave-sharding-jdbc</module>
+        <module>view-video-service</module>
+        <module>view-photo-service</module>
+        <module>view-api</module>
+        <module>view-config-server</module>
+        <module>view-zuul</module>
+        <module>view-hystrix-dashboard</module>
+        <module>view-hystrix-turbine</module>
+        <module>view-sleuth-elk</module>
+        <module>view-elasticsearch</module>
+        <module>view-rabbitmq</module>
+        <module>view-mycat</module>
+    </modules>
+
+
+</project>
