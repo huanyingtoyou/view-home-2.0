@@ -11,7 +11,7 @@ spring:
           uri: https://github.com/huanyingtoyou/view-home-config
           search-paths: repository
           username: huanyingtoyou
-          password: jtwmydtsgx#520
+          password: xxx
 eureka:
   client:
     serviceUrl:
