@@ -8,10 +8,10 @@ spring:
       label: master
       server:
         git:
-          uri: https://github.com/huanyingtoyou/view-home-config
+          uri: https://github.com/huanyingtoyou/view-home-config-2.0
           search-paths: repository
-          username: huanyingtoyou
-          password: jtwmydtsgx#520
+          username:
+          password:
 eureka:
   client:
     serviceUrl:

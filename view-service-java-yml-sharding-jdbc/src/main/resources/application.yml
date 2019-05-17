@@ -5,7 +5,7 @@ spring:
         jdbc-url: jdbc:mysql://localhost:3306/ds_0?useUnicode=true&characterEncoding=utf8&allowMultiQueries=true&useSSL=false
         driver-class-name: com.mysql.jdbc.Driver
         username: root
-        password:
+        password: lihy#520
         minimum-idle: 10
         maximum-pool-size: 200
         pool-name: DS0HikariCP

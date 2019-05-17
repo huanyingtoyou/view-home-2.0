@@ -1,7 +1,6 @@
 package com.lihy.view.user.test;
 
 import com.alibaba.fastjson.JSONObject;
-import com.google.common.collect.Lists;
 import com.lihy.view.common.entity.User;
 import com.lihy.view.common.util.ResponseResult;
 import com.lihy.view.user.application.UserServiceApplication;
@@ -10,14 +9,9 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.junit.runners.Parameterized;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.List;
 
 /**
  * 用于user服务的单元测试

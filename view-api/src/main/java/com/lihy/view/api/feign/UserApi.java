@@ -2,7 +2,7 @@ package com.lihy.view.api.feign;
 
 import com.lihy.view.common.entity.User;
 import com.lihy.view.common.util.ResponseResult;
-import org.springframework.cloud.netflix.feign.FeignClient;
+import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.*;
 
 /**
