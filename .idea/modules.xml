@@ -19,7 +19,6 @@
       <module fileurl="file://$PROJECT_DIR$/view-service-java-slave-sharding-jdbc/view-service-java-slave-sharding-jdbc.iml" filepath="$PROJECT_DIR$/view-service-java-slave-sharding-jdbc/view-service-java-slave-sharding-jdbc.iml" />
       <module fileurl="file://$PROJECT_DIR$/view-service-java-yml-sharding-jdbc/view-service-java-yml-sharding-jdbc.iml" filepath="$PROJECT_DIR$/view-service-java-yml-sharding-jdbc/view-service-java-yml-sharding-jdbc.iml" />
       <module fileurl="file://$PROJECT_DIR$/view-sleuth-elk/view-sleuth-elk.iml" filepath="$PROJECT_DIR$/view-sleuth-elk/view-sleuth-elk.iml" />
-      <module fileurl="file://$PROJECT_DIR$/view-sleuth-zipkin-server/view-sleuth-zipkin-server.iml" filepath="$PROJECT_DIR$/view-sleuth-zipkin-server/view-sleuth-zipkin-server.iml" />
       <module fileurl="file://$PROJECT_DIR$/view-user-service/view-user-service.iml" filepath="$PROJECT_DIR$/view-user-service/view-user-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/view-user-service-second/view-user-service-second.iml" filepath="$PROJECT_DIR$/view-user-service-second/view-user-service-second.iml" />
       <module fileurl="file://$PROJECT_DIR$/view-video-service/view-video-service.iml" filepath="$PROJECT_DIR$/view-video-service/view-video-service.iml" />

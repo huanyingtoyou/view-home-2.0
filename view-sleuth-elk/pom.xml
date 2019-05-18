@@ -2,22 +2,18 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <parent>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <groupId>org.springframework.boot</groupId>
-        <version>2.1.5.RELEASE</version>
-    </parent>
+
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>view-sleuth-elk</artifactId>
     <groupId>com.lihy.view</groupId>
     <version>0.0.1-SNAPSHOT</version>
 
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <java.version>1.8</java.version>
-        <spring-cloud.version>Greenwich.SR1</spring-cloud.version>
-    </properties>
+    <parent>
+        <groupId>com.lihy.view</groupId>
+        <artifactId>view-home-2.0</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
 
     <dependencies>
         <dependency>
@@ -46,26 +42,4 @@
             <version>4.6</version>
         </dependency>
     </dependencies>
-
-    <!-- 引入spring cloud的依赖 -->
-    <dependencyManagement>
-        <dependencies>
-            <dependency>
-                <groupId>org.springframework.cloud</groupId>
-                <artifactId>spring-cloud-dependencies</artifactId>
-                <version>${spring-cloud.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
-    <!-- 添加spring boot的maven插件 -->
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-        </plugins>
-    </build>
 </project>
