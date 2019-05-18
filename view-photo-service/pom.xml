@@ -48,16 +48,12 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-bus-amqp</artifactId>
         </dependency>-->
-        <!-- 链路追踪支持 -->
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-zipkin</artifactId>
-        </dependency>
 
         <!-- feign支持，可用于war包调用接口，feign包含ribbon，具有负载均衡功能 -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-openfeign</artifactId>
+            <version>${component.version}</version>
         </dependency>
         <!-- 服务降级及熔断支持 -->
         <dependency>
