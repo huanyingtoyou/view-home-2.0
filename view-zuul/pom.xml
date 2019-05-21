@@ -6,7 +6,8 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>view-zuul</artifactId>
-    <groupId>com.lihy.view</groupId>
+    <!-- parent中已经指定，这里不需要重复指定 -->
+    <!--<groupId>com.lihy.view</groupId>-->
     <version>0.0.1-SNAPSHOT</version>
 
     <parent>
@@ -21,6 +22,7 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
         </dependency>
+        <!-- zuul路由过滤支持 -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-zuul</artifactId>

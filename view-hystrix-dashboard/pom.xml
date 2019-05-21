@@ -6,7 +6,8 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>view-hystrix-dashboard</artifactId>
-    <groupId>com.lihy.view</groupId>
+    <!-- parent中已经指定，这里不需要重复指定 -->
+    <!--<groupId>com.lihy.view</groupId>-->
     <version>0.0.1-SNAPSHOT</version>
 
     <parent>
