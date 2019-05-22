@@ -6,7 +6,6 @@ import org.apache.http.HttpHost;
 import org.elasticsearch.action.admin.indices.create.CreateIndexRequest;
 import org.elasticsearch.action.admin.indices.create.CreateIndexResponse;
 import org.elasticsearch.action.admin.indices.delete.DeleteIndexRequest;
-import org.elasticsearch.action.admin.indices.delete.DeleteIndexResponse;
 import org.elasticsearch.action.admin.indices.get.GetIndexRequest;
 import org.elasticsearch.action.bulk.BulkRequest;
 import org.elasticsearch.action.bulk.BulkResponse;
@@ -14,6 +13,8 @@ import org.elasticsearch.action.index.IndexRequest;
 import org.elasticsearch.action.index.IndexResponse;
 import org.elasticsearch.action.search.SearchRequest;
 import org.elasticsearch.action.search.SearchResponse;
+import org.elasticsearch.action.support.master.AcknowledgedResponse;
+import org.elasticsearch.client.RequestOptions;
 import org.elasticsearch.client.RestClient;
 import org.elasticsearch.client.RestHighLevelClient;
 import org.elasticsearch.common.settings.Settings;
@@ -44,16 +45,14 @@ import java.util.*;
 public class ElasticsearchRestClient {
     private static Logger logger = LoggerFactory.getLogger(ElasticsearchRestClient.class);
 
-    public RestHighLevelClient getRestClient() {
+    private RestHighLevelClient getRestClient() {
 
-        RestHighLevelClient client = new RestHighLevelClient(
+        return new RestHighLevelClient(
                 RestClient.builder(new HttpHost("localhost", 9200, "http")));
-        return client;
     }
 
     /**
      * 初始化索引
-     *
      * @param indexName
      * @param typeName
      * @param shardNum
@@ -61,7 +60,6 @@ public class ElasticsearchRestClient {
      * @param builder
      * @return
      */
-
     public Boolean initIndex(String indexName,
                              String typeName,
                              int shardNum,
@@ -80,7 +78,7 @@ public class ElasticsearchRestClient {
         request.mapping(typeName, builder);
         CreateIndexResponse createIndexResponse = null;
         try {
-            createIndexResponse = client.indices().create(request);
+            createIndexResponse = client.indices().create(request, RequestOptions.DEFAULT);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -94,7 +92,6 @@ public class ElasticsearchRestClient {
      * @param jsonString
      * @return
      */
-
     public boolean indexNews(String indexName,
                             String typeName,
                             String id,
@@ -104,7 +101,7 @@ public class ElasticsearchRestClient {
         IndexRequest indexRequest = new IndexRequest(indexName, typeName, id)
                 .source(jsonString, XContentType.JSON);
         try {
-            IndexResponse indexResponse = client.index(indexRequest);
+            IndexResponse indexResponse = client.index(indexRequest, RequestOptions.DEFAULT);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -114,7 +111,6 @@ public class ElasticsearchRestClient {
 
     /**
      * 判断索引是否存在
-     *
      * @param indexName
      * @return
      */
@@ -122,7 +118,7 @@ public class ElasticsearchRestClient {
         GetIndexRequest request = new GetIndexRequest();
         request.indices(indexName);
         try {
-            boolean exists = getRestClient().indices().exists(request);
+            boolean exists = getRestClient().indices().exists(request, RequestOptions.DEFAULT);
             return exists;
         } catch (IOException e) {
             e.printStackTrace();
@@ -132,7 +128,6 @@ public class ElasticsearchRestClient {
 
     /**
      * 删除索引
-     *
      * @param indexName
      * @return
      */
@@ -140,8 +135,8 @@ public class ElasticsearchRestClient {
         try {
             if (existIndex(indexName)) {
                 DeleteIndexRequest deleteIndexRequest = new DeleteIndexRequest(indexName);
-                DeleteIndexResponse deleteIndexResponse = getRestClient().indices().delete(deleteIndexRequest);
-                return deleteIndexResponse.isAcknowledged();
+                AcknowledgedResponse acknowledgedResponse = getRestClient().indices().delete(deleteIndexRequest, RequestOptions.DEFAULT);
+                return acknowledgedResponse.isAcknowledged();
             } else {
                 logger.info("索引不存在");
             }
@@ -154,13 +149,11 @@ public class ElasticsearchRestClient {
 
     /**
      * 批量索引文档
-     *
      * @param indexName
      * @param typeName
      * @param newList
      * @return
      */
-
     public boolean indexNews(String indexName,
                             String typeName,
                             List newList) {
@@ -174,7 +167,7 @@ public class ElasticsearchRestClient {
             bulkRequest.add(indexRequest);
         }
         try {
-            BulkResponse bulkResponse = client.bulk(bulkRequest);
+            BulkResponse bulkResponse = client.bulk(bulkRequest, RequestOptions.DEFAULT);
             if (bulkResponse.hasFailures()) {
                 logger.error("批量索引失败");
                 return false;
@@ -227,9 +220,9 @@ public class ElasticsearchRestClient {
 
         try {
             SearchResponse searchResponse = getRestClient()
-                    .search(searchRequest);
+                    .search(searchRequest, RequestOptions.DEFAULT);
             SearchHits hits = searchResponse.getHits();
-            long totalHits = hits.getTotalHits();
+            long totalHits = hits.getTotalHits().value;
             SearchHit[] searchHits = hits.getHits();
             for (SearchHit hit : searchHits) {
 
@@ -258,7 +251,7 @@ public class ElasticsearchRestClient {
                 resultList.add(sourceAsMap);
             }
             long end = System.currentTimeMillis();
-            Map map = new HashMap();
+            Map map = new HashMap(3);
             map.put("totalHits", String.valueOf(totalHits));
             map.put("totalTime", String.valueOf(end - start));
             map.put("resultList", resultList);
