@@ -3,6 +3,7 @@ package com.lihy.view.sharding.service.impl;
 import com.lihy.view.common.constant.SystemConstant;
 import com.lihy.view.common.entity.Order;
 import com.lihy.view.common.util.ResponseResult;
+import com.lihy.view.sharding.commom.OrderRequest;
 import com.lihy.view.sharding.mapper.OrderMapper;
 import com.lihy.view.sharding.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,7 +20,7 @@ public class OrderServiceImpl implements OrderService {
     @Autowired
     private OrderMapper orderMapper;
     @Override
-    public ResponseResult<Void> insertOrder(Order order) {
+    public ResponseResult<Void> insertOrder(OrderRequest order) {
         ResponseResult<Void> responseResult = new ResponseResult<>();
         int i =  orderMapper.insertOrder(order);
         if (i > 0) {

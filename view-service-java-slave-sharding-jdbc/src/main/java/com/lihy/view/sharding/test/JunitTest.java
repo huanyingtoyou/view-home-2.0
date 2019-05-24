@@ -4,6 +4,7 @@ import com.alibaba.fastjson.JSONObject;
 import com.lihy.view.common.entity.Order;
 import com.lihy.view.common.util.ResponseResult;
 import com.lihy.view.sharding.application.ShardingSlaveServiceJavaApplication;
+import com.lihy.view.sharding.commom.OrderRequest;
 import com.lihy.view.sharding.service.OrderService;
 import org.junit.After;
 import org.junit.Before;
@@ -62,8 +63,7 @@ public class JunitTest {
     }
 
     public void insertOrder() {
-        Order order = new Order();
-        order.setOrderId((long)1);
+        OrderRequest order = new OrderRequest();
         order.setUserId(2);
         order.setStatus("可用");
         orderService.insertOrder(order);

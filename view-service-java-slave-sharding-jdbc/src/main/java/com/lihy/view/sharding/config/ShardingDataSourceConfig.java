@@ -99,10 +99,12 @@ public class ShardingDataSourceConfig {
      */
     private static Map<String, DataSource> createDataSourceMap() {
         final Map<String, DataSource> result = new HashMap<>();
-        result.put("demo_ds_master_0", buildDataSourceConfig("localhost", "demo_ds_master_0", "root", ""));
-        result.put("demo_ds_master_0_slave_0", buildDataSourceConfig("192.168.137.131", "demo_ds_master_0", "root", "jtwmyDTSGX#520"));
-        result.put("demo_ds_master_1", buildDataSourceConfig("localhost", "demo_ds_master_1", "root", ""));
-        result.put("demo_ds_master_1_slave_0", buildDataSourceConfig("192.168.137.131", "demo_ds_master_1", "root", "jtwmyDTSGX#520"));
+        result.put("demo_ds_master_0", buildDataSourceConfig("localhost", "demo_ds_master_0", "root", "lihy#520"));
+        //result.put("demo_ds_master_0_slave_0", buildDataSourceConfig("192.168.137.131", "demo_ds_master_0", "root", "jtwmyDTSGX#520"));
+        result.put("demo_ds_master_0_slave_0", buildDataSourceConfig("localhost", "demo_ds_master_0_0", "root", "lihy#520"));
+        result.put("demo_ds_master_1", buildDataSourceConfig("localhost", "demo_ds_master_1", "root", "lihy#520"));
+        //result.put("demo_ds_master_1_slave_0", buildDataSourceConfig("192.168.137.131", "demo_ds_master_1", "root", "jtwmyDTSGX#520"));
+        result.put("demo_ds_master_1_slave_0", buildDataSourceConfig("localhost", "demo_ds_master_1_1", "root", "lihy#520"));
         return result;
     }
 
@@ -118,7 +120,7 @@ public class ShardingDataSourceConfig {
         //使用druid连接数据库
         DruidDataSource druidDataSource = new DruidDataSource();
         druidDataSource.setDriverClassName("com.mysql.jdbc.Driver");
-        druidDataSource.setUrl(String.format("jdbc:mysql://%s:3306/%s?useUnicode=true&characterEncoding=utf8&allowMultiQueries=true&useSSL=false", ip , databaseName));
+        druidDataSource.setUrl(String.format("jdbc:mysql://%s:3306/%s?useUnicode=true&characterEncoding=utf8&allowMultiQueries=true&useSSL=false&serverTimezone=Asia/Shanghai", ip , databaseName));
         druidDataSource.setUsername(username);
         druidDataSource.setPassword(password);
         return druidDataSource;

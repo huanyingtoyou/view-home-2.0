@@ -1,6 +1,7 @@
 package com.lihy.view.eureka.application;
 
 
+import org.springframework.boot.Banner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.WebApplicationType;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -16,7 +17,13 @@ import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
 @EnableEurekaServer
 public class EurekaApplication {
     public static void main(String[] args) {
-        SpringApplication.run(EurekaApplication.class, args);
-        //new SpringApplicationBuilder(EurekaApplication.class).web(true).run(args);
+        //SpringApplication.run(EurekaApplication.class, args);
+        //new SpringApplicationBuilder(EurekaApplication.class).web(WebApplicationType.SERVLET).run(args);
+        SpringApplication springApplication = new SpringApplication(EurekaApplication.class);
+        springApplication.setBanner((environment, sourceClass, out) -> {
+            System.out.println("eeee");
+        });
+        springApplication.setBannerMode(Banner.Mode.CONSOLE);
+        springApplication.run(args);
     }
 }

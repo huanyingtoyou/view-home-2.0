@@ -1,6 +1,6 @@
 # banner更换
 #### 制作banner：
-从https://chars.surge.sh 网站上复制字符画，然后在src/main/resources目录下新建一个banner.txt文件，将字符画粘贴到该文件中。
+从https://chars.surge.sh 网站上复制字符画，然后在src/main/resources目录下新建一个banner.txt文件(banner.gif、banner.jpg或者banner.png)，将字符画粘贴到该文件中。
 
 
 #### 关闭banner：

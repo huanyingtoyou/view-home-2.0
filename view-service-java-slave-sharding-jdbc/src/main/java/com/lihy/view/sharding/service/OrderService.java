@@ -2,6 +2,7 @@ package com.lihy.view.sharding.service;
 
 import com.lihy.view.common.entity.Order;
 import com.lihy.view.common.util.ResponseResult;
+import com.lihy.view.sharding.commom.OrderRequest;
 
 import java.util.List;
 
@@ -10,6 +11,6 @@ import java.util.List;
  * @date 2018/10/25
  */
 public interface OrderService {
-    ResponseResult<Void> insertOrder(Order order);
+    ResponseResult<Void> insertOrder(OrderRequest order);
     ResponseResult<List<Order>> selectOrderByUserId(Integer userId);
 }

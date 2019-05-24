@@ -2,6 +2,7 @@ package com.lihy.view.sharding.controller;
 
 import com.lihy.view.common.entity.Order;
 import com.lihy.view.common.util.ResponseResult;
+import com.lihy.view.sharding.commom.OrderRequest;
 import com.lihy.view.sharding.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -19,7 +20,7 @@ public class OrderController {
     private OrderService orderService;
 
     @PostMapping("/insertOrder")
-    public ResponseResult<Void> insertOrder(@RequestBody Order order) {
+    public ResponseResult<Void> insertOrder(@RequestBody OrderRequest order) {
         return orderService.insertOrder(order);
     }
     @GetMapping("/selectOrderByUserId")

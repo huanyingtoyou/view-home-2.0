@@ -16,11 +16,9 @@
 
     <insert id="insertOrder" parameterType="com.lihy.view.common.entity.Order">
 		INSERT INTO t_order(
-		    order_id,
             user_id,
             status)
 		VALUES(
-		    #{orderId},
             #{userId},
             #{status})
     </insert>

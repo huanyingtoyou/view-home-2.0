@@ -63,7 +63,7 @@ public class JunitTest {
 
     public void insertOrder() {
         Order order = new Order();
-        order.setOrderId((long)1);
+        //order.setOrderId((long)1);
         order.setUserId(2);
         order.setStatus("可用");
         orderService.insertOrder(order);

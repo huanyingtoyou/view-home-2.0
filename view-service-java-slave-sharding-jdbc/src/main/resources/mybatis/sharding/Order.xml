@@ -14,13 +14,11 @@
         WHERE t.user_id = #{userId, jdbcType = INTEGER}
     </select>
 
-    <insert id="insertOrder" parameterType="com.lihy.view.common.entity.Order">
+    <insert id="insertOrder" parameterType="com.lihy.view.sharding.commom.OrderRequest">
 		INSERT INTO t_order(
-		    order_id,
             user_id,
             status)
 		VALUES(
-		    #{orderId},
             #{userId},
             #{status})
     </insert>

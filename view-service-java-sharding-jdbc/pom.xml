@@ -82,11 +82,11 @@
             <version>3.0.0</version>
         </dependency>-->
         <!-- sharding-jdbc-spring-boot-starter使用时有问题，总是报错Error creating bean with name 'io.shardingsphere.shardingjdbc.spring.boot.SpringBootConfiguration' -->
-        <dependency>
+        <!--<dependency>
             <groupId>io.shardingsphere</groupId>
             <artifactId>sharding-jdbc</artifactId>
             <version>3.0.0</version>
-        </dependency>
+        </dependency>-->
         <dependency>
             <groupId>io.shardingsphere</groupId>
             <artifactId>sharding-jdbc-core</artifactId>
