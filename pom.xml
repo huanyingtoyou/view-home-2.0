@@ -50,16 +50,6 @@
     </properties>
 
     <dependencies>
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-sleuth</artifactId>
-            <version>${component.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-sleuth-zipkin</artifactId>
-            <version>${component.version}</version>
-        </dependency>
         <!-- 服务链路追踪支持 -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
