@@ -20,7 +20,7 @@
     <dependencies>
         <dependency>
             <groupId>com.lihy.view</groupId>
-            <artifactId>view-api</artifactId>
+            <artifactId>view-common</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
         <!-- web服务支持 -->

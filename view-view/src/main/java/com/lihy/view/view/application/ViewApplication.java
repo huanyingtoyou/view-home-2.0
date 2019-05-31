@@ -15,7 +15,8 @@ import org.springframework.context.annotation.ComponentScan;
  */
 @SpringCloudApplication
 @ComponentScan(basePackages = {"com.lihy.view"})
-@EnableFeignClients(basePackages = "com.lihy.view.api")
+//@EnableFeignClients(basePackages = "com.lihy.view.api")
+@EnableFeignClients(basePackages = "com.lihy.view.view.api")
 public class ViewApplication {
     public static void main(String[] args) {
         SpringApplication.run(ViewApplication.class, args);

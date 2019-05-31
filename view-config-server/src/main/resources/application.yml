@@ -17,7 +17,9 @@ spring:
           #配置git仓库地址
           uri: https://github.com/huanyingtoyou/view-home-config-2.0
           #配置仓库路径
-          search-paths: repository
+          search-paths: datasource, view*
+          #search-paths: {profile}
+          #searchPaths: '{application}'
           #访问git仓库的用户名（如果git仓库为公开仓库，可以不填写用户名和密码）
           username:
           #访问git仓库的用户密码
